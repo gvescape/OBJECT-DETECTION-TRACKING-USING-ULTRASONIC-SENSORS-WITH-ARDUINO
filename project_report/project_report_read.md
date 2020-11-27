@@ -19,15 +19,15 @@ This system detects any object at any time irrespective of visibility (it also w
 # CONTENTS
 
 
-**Overview of the project
-Hardware Description
-Arduino
-Servo motor
-Ultrasonic sensors
-Interfacing
-Program code
-Result and Conclusion
-Reference**
+## Overview of the project
+1. **Hardware Description**
+2. **Arduino**
+3. **Servo motor**
+4. **Ultrasonic sensors**
+5. **Interfacing**
+6. **Program code**
+7. **Result and Conclusion**
+8. **Reference**
 
 
 
