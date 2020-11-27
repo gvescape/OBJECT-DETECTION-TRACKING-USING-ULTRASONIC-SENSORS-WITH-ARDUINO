@@ -319,7 +319,7 @@ AREF: Used to provide reference voltage for analog inputs with analogReference()
 
 Reset Pin: Making this pin LOW, resets the microcontroller.
 
-Communication:
+**Communication:**
 Arduino can be used to communicate with a computer, another Arduino board or other microcontrollers. The ATmega328P microcontroller provides UART TTL (5V) serial communication which can be done using digital pin 0 (Rx) and digital pin 1 (Tx). An ATmega16U2 on the board channels this serial communication over USB and appears as a virtual com port to software on the computer. The ATmega16U2 firmware uses the standard USB COM drivers, and no external driver is needed. However, on Windows, a .inf file is required. The Arduino software includes a serial monitor which allows simple textual data to be sent to and from the Arduino board. There are two RX and TX LEDs on the arduino board which will flash when data is being transmitted via the USB-to-serial chip and USB connection to the computer (not for serial communication on pins 0 and 1). A SoftwareSerial library allows for serial communication on any of the Uno's digital pins. The ATmega328P also supports I2C (TWI) and SPI communication. The Arduino software includes a Wire library to simplify use of the I2C bus.
 
 
@@ -328,10 +328,10 @@ When ATmega328 chip is used in place of Arduino Uno, or vice versa, the image be
 
 Arduino Uno ATmega328P Pin Mapping
 
-Software:
+## Software:
 Arduino IDE (Integrated Development Environment) is required to program the Arduino Uno board. Download it here.
 
-Programming Arduino:
+## Programming Arduino:
 Arduino programs are written in the Arduino Integrated Development Environment (IDE). Arduino IDE is a special software running on your system that allows you to write sketches (synonym for program in Arduino language) for different Arduino boards. The Arduino programming language is based on a very simple hardware programming language called processing, which is similar to the C language. After the sketch is written in the Arduino IDE, it should be uploaded on the Arduino board for execution.
 
 The first step in programming the Arduino board is downloading and installing the Arduino IDE. The open source Arduino IDE runs on Windows, Mac OS X, and Linux. Download the Arduino software (depending on your OS) from the official website and follow the instructions to install.
@@ -410,7 +410,7 @@ A servo motor is controlled by sending a series of pulses through the signal lin
 Generally pulses with 1ms duration correspond to 0 degrees position, 1.5ms duration to 90 degrees and 2ms to 180 degrees. Though the minimum and maximum duration of the pulses can sometimes vary with different brands and they can be 0.5ms for 0 degrees and 2.5ms for 180 degrees position.
 
 
-4.1. Arduino Servo Motors Control
+**4.1. Arduino Servo Motors Control**
 
 Let’s put the above said to test and make a practical example of controlling a hobby servo using Arduino. I will use the MG996R which is a high-torque servo featuring metal gearing with stall torque of 10 kg-cm. The high torque comes at a price and that’s the stall current of the servo which is 2.5A. The running current is from 500mA to 900mA and the operating voltage is from 4.8 to 7.2V.
 
@@ -421,7 +421,7 @@ The current ratings indicate that we cannot directly connect this servo to the A
 We simply need to connect the control pin of the servo to any digital pin of the Arduino board, connect the Ground and the positive wires to the external 5V power supply, and also connect the Arduino ground to the servo ground.
 
 
-4.2 Arduino Servo Motor Control Code:
+**4.2 Arduino Servo Motor Control Code:**
 
 Now let’s take a look at the Arduino code for controlling the servo motor
 
@@ -453,9 +453,9 @@ Here we just need to include the library, define the servo object, and using the
 ## ULTRASONIC SENSOR
 Ultrasonic detection sensor is most commonly used in industrial applications to detect hidden tracks, discontinuities in metals, composites, plastics, ceramics, and for water level detection. For this purpose the laws of physics which are indicating the propagation of sound waves through solid materials have been used since ultrasonic sensors using sound instead of light for detection.
 What is the principle of Ultrasonic Detection?
-5.1 Defining sound wave
+**5.1 Defining sound wave**
 Sound is a mechanical wave travelling through the mediums, which may be a solid, or liquid or gas. Sound waves can travel through the mediums with specific velocity depends on the medium of propagation. The sound waves which are having high frequency reflect from boundaries and produces distinctive echo patterns.
-5.2 Laws of physics for sound waves
+**5.2 Laws of physics for sound waves**
 Sound waves are having specific frequencies or number of oscillations per second. Humans can detect sounds in a frequency range from about 20Hz to 20 KHz. However the frequency range normally employed in ultrasonic detection is 100 KHz to 50MHz. The velocity of ultrasound at a particular time and temperature is constant in a medium.
 W = C/F (or) W = CT
 Where 
@@ -479,7 +479,7 @@ The commonly used transducers are contact transducers, angle beam transducers, d
 Delay line transducers are single element longitudinal wave transducers used in conjunction with a replaceable delay line. One of the reasons for choosing delay line transducer is that near surface resolution can be improved. The delay allows the element to stop vibrating before a return signal from the reflector can be received.
 The major advantages offered by immersion transducers over contact transducers are Uniform coupling reduces sensitivity variations, Reduction in scan time, and increases sensitivity to small reflectors.
  
-5.4. Operation of ultrasonic sensors:
+**5.4. Operation of ultrasonic sensors:**
 When an electrical pulse of high voltage is applied to the ultrasonic transducer it vibrates across a specific spectrum of frequencies and generates a burst of sound waves. Whenever any obstacle comes ahead of the ultrasonic sensor the sound waves will reflect back in the form of echo and generates an electric pulse. It calculates the time taken between sending sound waves and receiving echo. The echo patterns will be compared with the patterns of sound waves to determine detected signal’s condition.
  Three applications involving Ultrasonic detection:
 The distance of obstacle or discontinuities in metals is related to velocity of sound waves in a medium through which waves are passed and the time taken for echo reception. Hence the ultrasonic detection can be used for finding the distances between particles, for detecting the discontinuities in metals and for indicating the liquid level.
@@ -505,13 +505,13 @@ Ultrasonic sensor module comprises of one transmitter and one receiver. The tran
  
  
  
-Ultrasonic Distance Sensor Circuit for testing (ping test).
+## Ultrasonic Distance Sensor Circuit for testing (ping test).
 
 Characteristically, robotics applications are very popular but you’ll also find this product to be useful in security systems or as an infrared replacement if so desired.
-5.7. Ultrasonic Obstacle Detection
+**5.7. Ultrasonic Obstacle Detection**
 Ultrasonic sensors are used to detect the presence of targets and to measure the distance to targets in many robotized processing plants and process plants. Sensors with an ON or OFF digital output are available for detecting the presence of objects and sensors with an analog output which changes relatively to the sensor to target separation distance are commercially available.
 Ultrasonic obstacle sensor consists of a set of ultrasonic receiver and transmitter which operate at the same frequency. The point when the something moves in the zone secured the circuit’s fine offset is aggravated and the buzzer/alarm is triggered.
-5.8. Features:
+**5.8. Features:**
 Power consumption of 20mA
 Pulse in/out communication
 Narrow acceptance angle
@@ -519,7 +519,7 @@ Provides exact, non-contact separation estimations within 2cm to 3m
 The explosion point LED shows estimations in advancement
 3-pin header makes it simple to connect utilizing a servo development link
  
- 5.9. Specifications:
+ **5.9. Specifications:**
 Power supply			:	5V DC
 Quiescent current		:	<15mA
 Effectual angle			:	 <15°
@@ -532,7 +532,7 @@ The sensor provides an output pulse to the host that will terminate when the ech
 Note: ultrasonic sensor fails in the following cases:
 This is the main disadvantage using an ultrasonic sensor.
 
-INTERFACING
+## INTERFACING
 All the connections are made with Arduino and a chassis for the system is designed such that the ultrasonic sensors cover the range of a specified angle (120 degrees).
  Connections are as follows:
 All the Vcc pins or positive pins are connected to 5volts pin of Arduino board, Using a breadboard.
@@ -544,146 +544,14 @@ Servo control pin is connected to digital pin 9 of Arduino.
 Now Arduino is connected to the PC using connecting cable provided and code is dumped into it along with supply of power to it.
 After the code is dumped, there is no need for the pc to be connected. Arduino can be operated using the 9v battery using connector. 
 
-ARDUINO CODE
-#include <Servo.h>
-#define Rtrig 5
-#define Recho 4
-#define Ltrig 8
-#define Lecho 7
-#define Ctrig 10
-#define Cecho 11
-#define laser 6
-Servo servo;
-int angle = 90;
-void setup()
-{
-pinMode(laser,OUTPUT);
-pinMode(Ltrig,OUTPUT);
-pinMode(Rtrig,OUTPUT);
-pinMode(Ctrig,OUTPUT);
-pinMode(Lecho,INPUT);
-pinMode(Recho,INPUT);
-pinMode(Cecho,INPUT);
-servo.attach(9);
-servo.write(angle);
-Serial.begin(9600);
-Serial.println("reading values from sensor...");
-} 
-void loop()
-{
-  int R = measure_distance_cmR();
-  int L = measure_distance_cmL();
-  int C = measure_distance_cmC(); 
-Serial.print("DistanceR: ");
-Serial.println(R);
-Serial.print("DistanceL: ");
-Serial.println(L);
-Serial.print("DistanceC: ");
-Serial.println(C);
-    if ((10 < R < 30) || (10 < L < 30) || (10 < C < 30)) 
-    {
-     if (((R > 30) && (10 < L < 30) && (10 < C < 30))||((R > 30) && (10 < L < 20) && (C > 30))) 
-     {
-      if (angle<=180)
-           {angle = angle + 5;
-servo.write(angle);
-           //turnleft();
-           } 
-     }
-      if ((R > 30) && (L > 30) && (10 < C < 30))
-     {
-digitalWrite(laser,HIGH);
-delay(20);
-digitalWrite(laser,LOW);      
-     }
-
-     if (((R < 20) && (L > 20) && (C < 20)) ||((R < 20) && (L > 20) && (C > 20))) 
-    {
-      if(angle>=0)
-          {angle = angle - 5;
-servo.write(angle);
-          //turnright();
-          }
-     }
-  }
-delay(30);
-}
-
-float measure_distance_cmR()
-{
-  float Rdistance =0;
-  long Rtime_value=0;
-digitalWrite(Rtrig,HIGH);
-delayMicroseconds(10);
-digitalWrite(Rtrig,LOW);
-Rtime_value=pulseIn(Recho,HIGH);
-Rdistance=0.033*Rtime_value/2;
-  return Rdistance;
-    }
-float measure_distance_cmC()
-{
-  float Cdistance =0;
-  long Ctime_value=0;
-digitalWrite(Ctrig,HIGH);
-delayMicroseconds(10);
-digitalWrite(Ctrig,LOW);
-Ctime_value=pulseIn(Cecho,HIGH);
-Cdistance=0.033*Ctime_value/2;
-  return Cdistance;
-    }
-float measure_distance_cmL()
-{
-  float Ldistance =0;
-  long Ltime_value=0;
-digitalWrite(Ltrig,HIGH);
-delayMicroseconds(10);
-digitalWrite(Ltrig,LOW);
-Ltime_value=pulseIn(Lecho,HIGH);
-Ldistance=0.033*Ltime_value/2;
-  return Ldistance;
-}
-7.1. Explanation of code:
-First we declared all the pin connections as some variables for ease using “#define“.
-Then in setup function we declared all the pins as output or input using “pinmode”.
-In loop function we called the functions to take the readings of distances of three ultrasonic sensors.
-In distance measuring function, we calculated the distance in cm from the ultrasonic sensor pulse time readings using “digitalout”, “digitalin”, “pulsein” functions.
-Then logic for rotating the servo for tracking using “servo.write(angle)”. 
-If any of the distance is less than 20cms then if condition starts.
-If right and centre or only right sensor shows less than 20cms readings then turn the servo to right for 5 degrees.
-If left and centre or only left sensor shows less than 20cms readings then turn the servo to left for 5 degrees.
-If only centre sensor is showing the distance less than 20cms then turn on the laser diode for indicating the firing of object. 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-##TESTING
+## TESTING
 The assembled embedded system has been tested over different cases (range: 20cm, 30cm, 40cm...etc max range is 1m)
 The ranges of the ultrasonic sensor has been modified over the course of time and the stability of the system has been checked 
 It has been tested with different shapes of objects
 Observation:
 From above testing we found out that its works efficiently with flatter objects as the sensor needs to transmit and receive the waves through the object and also its efficacy is high at 30 degrees rather than a whole 90 degrees. 
 
-##RESULT
+## RESULT
 An embedded system using arduino board is designed for detection and tracking of an object. The required hardware is assembled and tested completely and found satisfactory.
 The design is found to be perfect interface with Arduino and the required output is clearly seen to be working.
 The further advancement for this will be searching and tracking in a 3 dimensional space instead of just a 2d space. Other advancement is to build a robot that can follow a human or an object continuously.
@@ -700,7 +568,7 @@ The further advancement for this will be searching and tracking in a 3 dimension
 
 
 
-##References 
+## References 
 
 https://www.elprocus.com/ultrasonic-detection-basics-application/
 
